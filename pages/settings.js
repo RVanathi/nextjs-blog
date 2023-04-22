@@ -49,7 +49,7 @@ function Settings() {
           />
           <label className="mt-5 text-xl">Password</label>
           <input className="settings-input" type="password" />
-          <button className="flex bg-teal-600 text-white border-none rounded-lg p-3 justify-center">
+          <button className="flex bg-teal-600 text-white border-none rounded-lg px-2 py-2 justify-center hover:opacity-60">
             Update
           </button>
         </form>

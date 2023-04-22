@@ -4,6 +4,6 @@
 
 @layer components {
     .settings-input {
-        @apply mb-6 h-8 outline-none border-b bg-slate-400/10 rounded-sm px-4 py-4 border-teal-600/40 text-teal-600/30 placeholder-teal-600/40 transition-all focus:border-[#f08080] focus:text-[#f08080]/30 hover:border-[#f08080]
+        @apply mb-6 h-8 outline-none border-b bg-slate-400/10 px-4 py-4 border-teal-600/40 text-teal-600/30 placeholder-teal-600/40 transition-all focus:border-[#f08080] focus:text-[#f08080]/30 hover:border-[#f08080] p-2 rounded-md
     }
 }

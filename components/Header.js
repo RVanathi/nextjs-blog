@@ -16,9 +16,18 @@ function Header() {
             alt=""
           />
         </Link>
-        <div className="uppercase inline-flex items-center space-x-5 md:inline-flex lg:inline-flex">
+        <div
+          className={
+            user
+              ? "uppercase inline-flex items-center space-x-5 md:inline-flex lg:inline-flex"
+              : "hidden"
+          }
+        >
           <h3>About</h3>
           <h3>Contact</h3>
+          <Link href="/write">
+            <h3>Write</h3>
+          </Link>
         </div>
       </div>
       <div className="uppercase flex items-center space-x-5">
