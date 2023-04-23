@@ -5,7 +5,6 @@ import { TrashIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 function Settings() {
   return (
     <>
-      <Header />
       <div className="flex flex-col p-5 max-w-7xl mx-auto justify-center">
         <div className="flex flex-row items-center justify-between">
           <span className="text-2xl mb-5 text-[#f08080]">

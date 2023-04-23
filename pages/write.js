@@ -14,7 +14,6 @@ import Header from "@/components/Header";
 function Write() {
   return (
     <>
-      <Header />
       <div className="flex flex-col p-12 items-center">
         <Image
           className="h-60  object-cover rounded-lg "
