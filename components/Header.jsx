@@ -24,23 +24,23 @@ function Header() {
         >
           <h3>About</h3>
           <h3>Contact</h3>
-          <Link href="/write">
+          {/* <Link href="/write">
             <h3>Write</h3>
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="uppercase flex items-center space-x-5">
         {user ? (
           <>
-            <Link href="/settings">
-              <Image
-                className="w-16 h-16 rounded-full object-contain cursor-pointer"
-                src="/../public/assets/bitmoji-3.png"
-                width="200"
-                height="200"
-                alt=""
-              />
-            </Link>
+            {/* <Link href="/settings"> */}
+            <Image
+              className="w-16 h-16 rounded-full object-contain cursor-pointer"
+              src="/../public/assets/bitmoji-3.png"
+              width="200"
+              height="200"
+              alt=""
+            />
+            {/* </Link> */}
             <h3 className="text-[#f08080] border px-4 py-1 rounded-full border-[#f08080] hover:bg-[#f08080] hover:text-white hover:opacity-60">
               Logout
             </h3>
