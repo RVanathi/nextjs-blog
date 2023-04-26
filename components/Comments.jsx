@@ -8,21 +8,20 @@ function Comments({ slug }) {
   const [comments, setComments] = useState([]);
   useEffect(() => {
     getComments(slug).then((result) => setComments(result));
-  });
+  }, []);
 
   return (
     <>
       {
         <div className="bg-[#fde2e4] shadow-lg rounded-lg p-8 pb-12 mb-8">
           <h3 className="text-xl mb-8 font-semibold border-b border-[#f08080]/40 pb-4">
-            {/* {comments.length > 0 ? "Comments" : "No Comments"} */}
             Comments
             <ChatBubbleOvalLeftIcon className="h-6 w-6 inline ml-2 text-[#f08080]" />
             <span className="text-sm">{comments.length}</span>
           </h3>
           {comments.length > 0
-            ? comments.map((comment) => (
-                <div key={comment.createdAt} className=" mb-4 pb-4">
+            ? comments.map((comment, index) => (
+                <div key={index} className="mb-4 pb-4">
                   <p className="mb-4">
                     <span className="font-semibold">{comment.name}</span> on{" "}
                     {new Date(comment.createdAt).toLocaleDateString("en-US", {
