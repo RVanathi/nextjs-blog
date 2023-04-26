@@ -4,7 +4,7 @@ import { getPosts } from "../services";
 
 export default function Home({ posts }) {
   return (
-    <main className="max-w-7xl mx-auto">
+    <main>
       <Head>
         <title>VR Blog</title>
         <link rel="icon" href="/favicon.ico" />

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Footer } from ".";
 
 function Header() {
   const user = true;
   return (
-    <header className="sticky flex justify-between max-w-7xl mx-auto px-5 py-2">
+    <header id="home" className="sticky flex justify-between px-5 py-2">
       <div className="md:flex lg:flex items-center space-x-5">
         <Link href="/">
           <Image
@@ -22,11 +23,12 @@ function Header() {
               : "hidden"
           }
         >
-          <h3>About</h3>
-          <h3>Contact</h3>
-          {/* <Link href="/write">
-            <h3>Write</h3>
-          </Link> */}
+          <Link href="#about" className="hover:text-[#f08080]">
+            <h3>About</h3>
+          </Link>
+          <Link href="#contact" className="hover:text-[#f08080]">
+            <h3>Contact</h3>
+          </Link>
         </div>
       </div>
       <div className="uppercase flex items-center space-x-5">

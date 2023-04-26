@@ -8,3 +8,4 @@ export { default as Comments } from "./Comments";
 export { default as PostDetail } from "./PostDetail";
 export { default as Author } from "./Author";
 export { default as AdjacentPostCard } from "./AdjacentPostCard";
+export { default as Footer } from "./Footer";

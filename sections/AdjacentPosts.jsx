@@ -15,30 +15,16 @@ const AdjacentPosts = ({ createdAt, slug }) => {
   }, [slug]);
 
   return (
-    <div className="">
+    <div>
       {dataLoaded && (
         <div className="flex flex-row justify-between">
           {adjacentPost.previous && (
-            <div
-              className="flex"
-              // className={`${
-              //   adjacentPost.next
-              //     ? "col-span-1 lg:col-span-4"
-              //     : "col-span-1 lg:col-span-8"
-              // } adjacent-post rounded-lg relative h-72`}
-            >
+            <div className="flex">
               <AdjacentPostCard post={adjacentPost.previous} position="LEFT" />
             </div>
           )}
           {adjacentPost.next && (
-            <div
-              className="flex"
-              // className={`${
-              //   adjacentPost.previous
-              //     ? "col-span-1 lg:col-span-4"
-              //     : "col-span-1 lg:col-span-8"
-              // } adjacent-post rounded-lg relative h-72`}
-            >
+            <div className="flex">
               <AdjacentPostCard post={adjacentPost.next} position="RIGHT" />
             </div>
           )}
@@ -49,4 +35,3 @@ const AdjacentPosts = ({ createdAt, slug }) => {
 };
 
 export default AdjacentPosts;
-//grid grid-cols-1 lg:grid-cols-8 gap-12 mb-8
