@@ -41,13 +41,3 @@ export const getStaticProps = async () => {
     props: { posts },
   };
 };
-// import Categories from "@/components";
-// import PostCard from "@/components";
-// import PostWidget from "@/componets";
-//flex flex-row gap-2 mt-6
-//flex flex-2
-//flex-1
-//line 21 -ss "grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-20"
-//  21-js       "grid grid-cols-1 lg:grid-cols-12 gap12"
-//line 28 flex flex-col
-//js line 27 lg:col-span-4 col-span-1
