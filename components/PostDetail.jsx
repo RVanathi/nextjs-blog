@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import { CalendarDaysIcon } from "@heroicons/react/24/solid";
+import {
+  CalendarDaysIcon,
+  ChatBubbleOvalLeftIcon,
+} from "@heroicons/react/24/solid";
 
 function PostDetail({ post }) {
   const getContentFragment = (index, text, obj, type) => {

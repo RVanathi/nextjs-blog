@@ -8,6 +8,7 @@ import {
   Comments,
   CommentsForm,
 } from "../../components";
+import { AdjacentPosts } from "../../sections";
 
 function PostDetails({ post }) {
   return (
@@ -15,9 +16,10 @@ function PostDetails({ post }) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
           <PostDetail post={post} />
+          <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
           <Author author={post.author} />
-          <Comments slug={post.slug} />
           <CommentsForm slug={post.slug} />
+          <Comments slug={post.slug} />
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
@@ -50,9 +52,3 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-
-// import Categories from "../../components";
-// import PostDetail from "../../components";
-// import PostWidget from "../../components";
-// import Author from "../../components";
-// import Comments from "../../components";
