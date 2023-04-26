@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Footer } from ".";
 
 function Header() {
   const user = true;
@@ -10,9 +9,10 @@ function Header() {
         <Link href="/">
           <Image
             className="w-44 object-contain cursor-pointer"
-            src="/../public/assets/blog-new.png"
-            width="200"
-            height="200"
+            // src="/../public/assets/blog-new.png"
+            src="https://media.graphassets.com/NpnDPuw7SYqSYDsg7R4A"
+            width="600"
+            height="500"
             alt=""
           />
         </Link>
@@ -34,15 +34,13 @@ function Header() {
       <div className="uppercase flex items-center space-x-5">
         {user ? (
           <>
-            {/* <Link href="/settings"> */}
             <Image
               className="w-16 h-16 rounded-full object-contain cursor-pointer"
-              src="/../public/assets/bitmoji-3.png"
+              src="https://media.graphassets.com/ilwhbQL6TLKFzAiFPxwQ"
               width="200"
               height="200"
               alt=""
             />
-            {/* </Link> */}
             <h3 className="text-[#f08080] border px-4 py-1 rounded-full border-[#f08080] hover:bg-[#f08080] hover:text-white hover:opacity-60">
               Logout
             </h3>

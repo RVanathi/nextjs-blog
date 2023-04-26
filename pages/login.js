@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Login() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('../public/assets/login-bg.jpg')] bg-cover">
+    <div className="h-screen flex flex-col items-center justify-center bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://media.graphassets.com/VycFsiFfTGCj2JmpAHkV')] bg-cover">
       <span className="text-5xl opacity-100">Login</span>
       <form className="flex flex-col mt-5">
         <label className="m-2">Email</label>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Register() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('../public/assets/register-bg.jpg')] bg-cover">
+    <div className="h-screen flex flex-col items-center justify-center bg-[linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('https://media.graphassets.com/e7ozRhe7QjKEKdGRqW7I')] bg-cover">
       <span className="text-5xl opacity-100">Register</span>
       <form className="flex flex-col mt-5">
         <label className="m-2">Username</label>
