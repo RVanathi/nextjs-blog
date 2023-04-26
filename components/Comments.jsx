@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import parse from "html-react-parser";
+import moment from "moment/moment";
 
 import { getComments } from "@/services";
 import { ChatBubbleOvalLeftIcon } from "@heroicons/react/24/outline";
@@ -24,11 +25,12 @@ function Comments({ slug }) {
                 <div key={index} className="mb-4 pb-4">
                   <p className="mb-4">
                     <span className="font-semibold">{comment.name}</span> on{" "}
-                    {new Date(comment.createdAt).toLocaleDateString("en-US", {
+                    {/* {new Date(comment.createdAt).toLocaleDateString("en-US", {
                       day: "numeric",
                       month: "long",
                       year: "numeric",
-                    })}
+                    })} */}
+                    {moment(comment.createdAt).format("MMM DD, YYYY")}
                   </p>
                   <p className="whitespace-pre-line w-full">
                     {parse(comment.comment)}

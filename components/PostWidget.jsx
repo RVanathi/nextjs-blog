@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { getRecentPosts, getSimilarPosts } from "../services";
+import moment from "moment/moment";
 
 function PostWidget({ categories, slug }) {
   const [relatedPosts, setRelatedPosts] = useState([]);
@@ -39,11 +40,12 @@ function PostWidget({ categories, slug }) {
               {post.title}
             </Link>
             <p className="text-gray-600 text-s">
-              {new Date(post.createdAt).toLocaleDateString("en-US", {
+              {/* {new Date(post.createdAt).toLocaleDateString("en-US", {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
-              })}
+              })} */}
+              {moment(post.createdAt).format("MMM DD, YYYY")}
             </p>
           </div>
         </div>

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
+import moment from "moment/moment";
 import {
   CalendarDaysIcon,
-  ChatBubbleOvalLeftIcon,
 } from "@heroicons/react/24/solid";
 
 function PostDetail({ post }) {
@@ -90,11 +90,12 @@ function PostDetail({ post }) {
           <div className="font-medium text-gray-700">
             <CalendarDaysIcon className="h-6 w-6 inline mr-2 text-[#f08080]" />
             <span className="text-sm">
-              {new Date(post.createdAt).toLocaleDateString("en-US", {
+              {moment(post.createdAt).format("MMM DD, YYYY")}
+              {/* {new Date(post.createdAt).toLocaleDateString("en-US", {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
-              })}
+              })} */}
             </span>
           </div>
         </div>

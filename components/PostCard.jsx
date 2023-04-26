@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
+import moment from "moment/moment";
 
 function PostCard({ post }) {
   // console.log(post);
@@ -22,11 +23,12 @@ function PostCard({ post }) {
               {/* flex flex-col items-start justify-center */}
               <p className="font-bold group-hover:underline">{post.title}</p>
               <p className="text-sm">
-                {new Date(post.createdAt).toLocaleDateString("en-US", {
+              {moment(post.createdAt).format('MMM DD, YYYY')}
+                {/* {new Date(post.createdAt).toLocaleDateString("en-US", {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
-                })}
+                })} */}
               </p>
             </div>
             {/* gap-x-1 */}
