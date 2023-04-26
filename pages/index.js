@@ -20,8 +20,8 @@ export default function Home({ posts }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-6 gap-10">
         <div className="lg:col-span-4 col-span-1 grid grid-cols-1 md:grid-cols-2 px-10 gap-10 gap-y-16 pb-20">
-          {posts.map((post) => (
-            <PostCard key={post.title} post={post.node} />
+          {posts.map((post, index) => (
+            <PostCard key={index} post={post.node} />
           ))}
         </div>
         <div className="lg:col-span-2 col-span-1 mt-8">

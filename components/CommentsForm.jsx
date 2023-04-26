@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { submitComment } from "@/services";
 
 function CommentsForm({ slug }) {
   const [error, setError] = useState(false);
@@ -8,6 +9,11 @@ function CommentsForm({ slug }) {
   const nameEl = useRef();
   const emailEl = useRef();
   const storeDataEl = useRef();
+
+  useEffect(() => {
+    nameEl.current.value = window.localStorage.getItem("name");
+    emailEl.current.value = window.localStorage.getItem("email");
+  }, []);
 
   const handleCommentSubmission = () => {
     setError(false);
@@ -28,28 +34,35 @@ function CommentsForm({ slug }) {
     };
 
     if (storeData) {
-      localStorage.setItem("name", name);
-      localStorage.setItem("email", email);
+      window.localStorage.setItem("name", name);
+      window.localStorage.setItem("email", email);
     } else {
-      localStorage.remove("name", name);
-      localStorage.remove("email", email);
+      window.localStorage.remove("name", name);
+      window.localStorage.remove("email", email);
     }
+
+    submitComment(commentObj).then((res) => {
+      setShowSuccessMessage(true);
+      setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 3000);
+    });
   };
   return (
     <div className="bg-[#fde2e4] shadow-lg rounded-lg p-8 pb-12 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b border-[#f08080]/40 pb-4">
-        Comments
+        Leave a Comment
       </h3>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <textarea
           ref={commentEl}
-          className="p-4 outline-none w-full rounded-lg focus:ring-1 focus:ring-[#f08080] text-gray-700"
+          className="h-40 p-4 outline-none w-full rounded-lg focus:ring-1 focus:ring-[#f08080] text-gray-700"
           placeholder="Comment"
           name="comment"
         />
       </div>
 
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 mb-4">
+      <div className="grid grid-cols-1  lg:grid-cols-2 gap-4 mb-4">
         <input
           type="text"
           ref={nameEl}
@@ -58,11 +71,11 @@ function CommentsForm({ slug }) {
           className="p-4 outline-none w-full rounded-lg focus:ring-1 focus:ring-[#f08080] text-gray-700"
         />
         <input
-          type="text"
+          type="email"
           ref={emailEl}
           name="email"
           placeholder="Email"
-          className="p-4 outline-none w-full rounded-lg focus:ring-1 focus:ring-[#f08080] text-gray-700"
+          className="py-2 px-4 outline-none w-full rounded-lg focus:ring-1 focus:ring-[#f08080] text-gray-700"
         />
       </div>
       <div className="grid grid-cols-1 gap-4 mb-4">
@@ -94,7 +107,9 @@ function CommentsForm({ slug }) {
           Post Comment
         </button>
         {showSuccessMessage && (
-          <span className="text-xl float-right font-semibold mt-3 text-green-500"></span>
+          <span className="text-md float-right mt-3 text-teal-600">
+            Comment submitted for review
+          </span>
         )}
       </div>
     </div>

@@ -7,10 +7,7 @@ function PostCard({ post }) {
   // console.log(post);
   return (
     <Link href={`/post/${post.slug}`}>
-      <div
-        key={post.title}
-        className="flex flex-col group cursor-pointer bg-[#fde2e4] mt-8 rounded-lg hover:scale-105 transition-transform duration-200 ease-out "
-      >
+      <div className="flex flex-col group cursor-pointer bg-[#fde2e4] mt-8 rounded-lg hover:scale-105 transition-transform duration-200 ease-out ">
         <div className="relative w-full h-80 drop-shadow-xl ">
           <Image
             className="object-cover object-left rounded-t-lg lg:object-center"
