@@ -4,7 +4,7 @@ import { ShareIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 function Footer() {
   return (
-    <footer className="p-5 mb-0 mt-5 bg-gradient-to-br from-pink-300 to-orange-300 border-y border-orange-500">
+    <footer className="px-5 pt-5 mb-0 mt-5 bg-gradient-to-br from-pink-300 to-orange-300 border-y border-orange-500">
       <div className="flex flex-col text-gray-600 md:flex-row lg:flex-row">
         <div id="about">
           <h3 className="font-semibold text-xl pb-2">About</h3>This is a blog
@@ -35,6 +35,9 @@ function Footer() {
           <SocialIcon network="email" fgColor="#f08080" bgColor="transparent" />
         </div>
       </div>
+      <span className="pt-2 text-xs text-[#f08080]">
+        Copyright ©2023 Vanathi Rajasekar
+      </span>
     </footer>
   );
 }
